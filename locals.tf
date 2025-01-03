@@ -8,8 +8,9 @@ locals {
   workspace = {
     "fem-eci-workspace3" = {
       description    = "Example automation workspace for Terraform Cloud resources."
-      execution_mode = "local"
+      execution_mode = "remote"
       project_id     = module.project["fem-eci-project3"].id
+      vcs_repo_identifier = "${var.github_organization_name}/fem-eci-terraform-tfe"
     }
   }
 }
